@@ -2,9 +2,9 @@
 import csv
 import os
 # Assign a variable to load a file from a path.
-file_to_load = os.path.join("/Users/chantalbinda/Desktop/Boot Camp Folder/Resources/election_results.csv")
+file_to_load = os.path.join("/Users/chantalbinda/Desktop/Election Data/election_results.csv")
 # Assign a variable to save the file to a path.
-file_to_save = os.path.join("analysis", "election_analysis.txt")
+file_to_save = os.path.join("analysis", "election_analysis.txt") 
 
 # 1. Initialize a total vote counter.
 total_votes = 0
@@ -74,3 +74,11 @@ for candidate in candidate_votes:
          winning_percentage = vote_percentage
          # And, set the winning_candidate equal to the candidate's name.
          winning_candidate = candidate
+
+winning_candidate_summary = (
+    f"-------------------------\n"
+    f"Winner: {winning_candidate}\n"
+    f"Winning Vote Count: {winning_count:,}\n"
+    f"Winning Percentage: {winning_percentage:.1f}%\n"
+    f"-------------------------\n")
+print(winning_candidate_summary)
